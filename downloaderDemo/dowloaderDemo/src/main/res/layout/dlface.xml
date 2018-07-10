@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="74dip"
+        android:background="@drawable/download_header_bg"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="wrap_content"
+            android:layout_height="25.0dip"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/title_bar"
+                style="@style/download_actionbar_style"
+                android:paddingLeft="4dp"
+                android:text="@string/download_top_title"
+                android:textColor="@color/white"
+                android:textSize="@dimen/download_title" />
+
+            <TextView
+                android:id="@id/edit_bar"
+                style="@style/download_actionbar_style"
+                android:text="@string/download_select_all"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/top_line2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/top"
+            android:layout_marginRight="68.0dip"
+            android:layout_marginTop="16.0dip"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:id="@+id/ll_downloading"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@+id/downloading_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/downloading"
+                    android:textColor="@color/download_title_color"
+                    android:textSize="@dimen/download_sub_title" />
+
+                <TextView
+                    android:id="@+id/downloading_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingLeft="4.0dip"
+                    android:textColor="@color/download_title_color"
+                    android:textSize="@dimen/download_count_size" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_downloaded"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:id="@id/done_tab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/download_done"
+                    android:textColor="@color/download_title_color"
+                    android:textSize="@dimen/download_sub_title" />
+
+                <TextView
+                    android:id="@id/done_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingLeft="4.0dip"
+                    android:textColor="@color/download_title_color"
+                    android:textSize="@dimen/download_count_size" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_line"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/top_line2"
+            android:layout_marginLeft="48dp"
+            android:src="@drawable/download_tab" />
+    </RelativeLayout>
+    <!--
+    <ListView
+        android:id="@+id/download_list"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:divider="#ffffff"
+        android:dividerHeight="10dip" >
+    </ListView>
+    -->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewpager"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+
+</LinearLayout>

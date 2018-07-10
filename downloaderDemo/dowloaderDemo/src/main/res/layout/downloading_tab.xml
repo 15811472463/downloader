@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/download_bg_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dip"
+        android:layout_weight="1.0">
+
+        <ListView
+            android:id="@+id/lv_downloading"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/download_bg_color"
+            android:divider="@drawable/download_item_divider"
+            android:dividerHeight="2.0px"
+            android:fadingEdge="none" />
+
+        <include layout="@layout/download_empty_view" />
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/download_shadow" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="Add Task" />
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="Reset" />
+    </LinearLayout>
+
+    <include layout="@layout/download_footer" />
+</LinearLayout>

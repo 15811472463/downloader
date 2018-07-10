@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout android:id="@id/empty" android:background="@color/download_bg_color" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:layout_gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content">
+        <ImageView android:id="@id/download_no_img" android:layout_width="120.0dip" android:layout_height="120.0dip" android:src="@drawable/download_no_tasks" android:layout_centerHorizontal="true" />
+        <TextView android:textSize="@dimen/download_sub_title" android:textColor="@color/download_item_sub_left_color" android:id="@id/empty_view_description" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="6.0dip" android:text="@string/download_no_tasks" android:includeFontPadding="false" android:layout_below="@id/download_no_img" android:layout_centerHorizontal="true" />
+    </RelativeLayout>
+</FrameLayout>

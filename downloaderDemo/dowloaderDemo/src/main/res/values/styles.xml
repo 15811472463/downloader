@@ -1,0 +1,37 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/dialog_blue_line</item>
+        <item name="colorPrimaryDark">@color/dialog_blue_line</item>
+        <item name="colorAccent">@color/dialog_blue_line</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+        <style name="download_actionbar_style">
+            <item name="android:layout_width">fill_parent</item>
+            <item name="android:layout_height">25.0dip</item>
+            <item name="rightZonesVisibility">visible</item>
+            <item name="titleColor">@color/download_title_color</item>
+            <item name="rightTxtZone1Text">@string/cancel</item>
+            <item name="rightTxtZone1TxtColor">#ffffffff</item>
+            <item name="rightTxtZone1TxtSize">16.0dip</item>
+            <item name="rightTxtZone1TxtShadowRadius">1.0</item>
+            <item name="rightTxtZone1TxtShadowDx">0.0</item>
+            <item name="rightTxtZone1TxtShadowDy">1.0</item>
+            <item name="rightTxtZone1TxtShadowColor">#66000000</item>
+            <item name="rightImgZone2ImageSrc">@drawable/download_edit_selector</item>
+        </style>
+
+
+
+</resources>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello">Hello World, TestAndroidActivity!</string>
+    <string name="app_name">DownLoaderDemo</string>
+    <string name="app_describe">非常感谢您们的支持！</string>
+    
+    <string name="mainactivity">MainActivity</string>
+    <!-- activity标题 -->
+    <string name="main_title"> Main</string>
+    <string name="db_title"> 数据库操作模块</string>
+    <string name="cache_title"> 缓存模块</string>
+    <string name="image_cache_title"> 图片缓存模块</string>
+    <string name="mvc_title"> MVC模块</string>
+    <string name="http_title"> Http模块</string>
+    <string name="download_title">下载器插件</string>
+    <string name="simple_download_title"> 第一种简单模块模块</string>
+    <string name="simple_two_download_title"> 第二种简单模块模块</string>
+    <string name="test_other_title">几个简单的工具</string>
+    <!-- main -->
+    <string name="test_db">数据库模块</string>
+    <string name="test_cache">缓存模块</string>
+    <string name="test_image_cache">图片缓存模块</string>
+    <string name="test_mvc">MVC模块</string>
+    <string name="test_http">http模块</string>
+    <string name="test_download">下载器模块</string>
+    <string name="test_other">测试其他工具</string>
+    <string name="exit_app">退出应用程序</string>
+
+    <!-- db -->
+    <string name="insert_data">插入数据</string>
+    <string name="delete_data">删除数据</string>
+    <string name="update_data">更新数据</string>
+    <string name="select_data">查询数据</string>
+    <string name="show_data">显示数据</string>
+    <!-- test_simple_down -->
+    <string name="test_simple_down">单线程 简单下载器之一</string>
+    <string name="test_simple_down_two">单线程 简单下载器之二</string>
+    <string name="test_multi_thread_down">多线程下载</string>
+
+    <!-- other -->
+    <string name="test_configure">测试配置器</string>
+    <string name="test_resoperate">测试资源读取</string>
+    <string name="test_comparator">测试任意对象比较器</string>
+
+    <!-- from baidu -->
+    
+    <string name="no">否</string>
+        <string name="download_top_title">下载demo</string>
+        <string name="cancel">取消</string>
+            <string name="delete">删除</string>
+
+<string name="download_delete_title">删除任务</string>
+    <string name="download_delete_downloading_all">确定删除选中下载任务吗？</string>
+    <string name="download_delete_downloading_header">确定删除选中的</string>
+    <string name="download_delete_downloading_tail">项下载任务吗？</string>
+    <string name="download_delete_source_file">同时删除源文件</string>
+    <string name="download_file_unavailable">文件不可用或已被删除</string>
+    <string name="download_restart">重新下载</string>
+    <string name="download_wifi_reconnected">wifi已连接，恢复视频下载</string>
+    <string name="download_finish_tip_end">下载完成</string>
+    <string name="download_finish_tip_novel_end">离线完成</string>
+    <string name="download_finish_visit_btn">去查看</string>
+    
+        <string name="download_default_title">未知</string>
+    <string name="download_select_all">全选</string>
+    <string name="download_no_tasks">你没有正在下载的任务</string>
+    <string name="download_no_file">你还没有%s文件</string>
+    <string name="download_has_pause">已暂停</string>
+    <string name="download_err_cannotresume">无法续传</string>
+    <string name="download_waitingfor">等待下载</string>
+     <string name="downloading">正在下载</string>
+    <string name="download_done">已下载</string>
+    <string name="download_pause">暂停</string>
+    <string name="download_resume">继续</string>
+    <string name="download_retry">重试</string>
+    <string name="download_install">安装</string>
+</resources>
