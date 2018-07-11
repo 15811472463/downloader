@@ -1804,9 +1804,13 @@ public class DownloadManager extends Thread {
     }
 
     private void addNotifactions(String url, DownloadTask downloadTask) {
-        mNotificationHelper.addNotification(downloadTask.getId() + mDbHashCode, -1,
-                StringUtils.getOriginalFileNameFromUrl(url),
-                downloadTask.getCnname(), url);
+        try {
+            mNotificationHelper.addNotification(downloadTask.getId() + mDbHashCode, -1,
+                    StringUtils.getOriginalFileNameFromUrl(url),
+                    downloadTask.getCnname(), url);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private String encodeUrl(String url) {

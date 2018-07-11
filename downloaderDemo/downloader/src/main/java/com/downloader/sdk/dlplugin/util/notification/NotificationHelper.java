@@ -32,20 +32,24 @@ public class NotificationHelper {
 
     public synchronized void addNotification(long notifactionId, int icon,
             String name, String cnname, String url) {
-        DLNotification dlNotification = mNotifications.get(notifactionId);
-        Logger.e(TAG, "taskId--->" + notifactionId + ";notifaction--->" + "添加了");
-        if (dlNotification != null) {
-            if (dlNotification.getNotification() != null) {
-                return;
+        try {
+            DLNotification dlNotification = mNotifications.get(notifactionId);
+            Logger.e(TAG, "taskId--->" + notifactionId + ";notifaction--->" + "添加了");
+            if (dlNotification != null) {
+                if (dlNotification.getNotification() != null) {
+                    return;
+                }
             }
+            DLNotification dlnotification = new DLNotification(this.mContext,
+                    notifactionId, icon, name, cnname, url);
+            dlnotification.getNotification().flags = Notification.FLAG_NO_CLEAR;
+            mNotifications.put(notifactionId, dlnotification);
+            mNotificationManager.notify(
+                    DLNotification.getNotificationIdByTaskId(notifactionId),
+                    dlnotification.getNotification());
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        DLNotification dlnotification = new DLNotification(this.mContext,
-                notifactionId, icon, name, cnname, url);
-        dlnotification.getNotification().flags = Notification.FLAG_NO_CLEAR;
-        mNotifications.put(notifactionId, dlnotification);
-        mNotificationManager.notify(
-                DLNotification.getNotificationIdByTaskId(notifactionId),
-                dlnotification.getNotification());
 
     }
 

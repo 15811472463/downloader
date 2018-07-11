@@ -95,8 +95,6 @@ public class AsyncHttpClient {
                 DEFAULT_SOCKET_BUFFER_SIZE);
 
         HttpProtocolParams.setVersion(httpParams, HttpVersion.HTTP_1_1);
-//        HttpProtocolParams.setUserAgent(httpParams, String.format(
-//                "adsagedlplugin/%s (http://www.adsage.cn)", VERSION));
 
         SchemeRegistry schemeRegistry = new SchemeRegistry();
         schemeRegistry.register(new Scheme("http", PlainSocketFactory

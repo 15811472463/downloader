@@ -22,11 +22,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author yangchangwei
+ *
  *
  */
 /**
- * @author yangchangwei
+ * @author ycw
  */
 public class DBUtil extends SQLiteOpenHelper {
     private static DBUtil mInstance = null;
