@@ -76,10 +76,10 @@ public class DownloadManager extends Thread {
     private Context mContext;
     private DBUtil mDbutil;
     private static DownloadManager mDownloadManager;
-    private final static String TAG = "MobiDownloadManager";
-    public static final String NOTIFICATION_CLICK_ACTION = "com.adsage.sdk.dlplugin.notification_click_action";
+    private final static String TAG = "DownloadManager";
+    public static final String NOTIFICATION_CLICK_ACTION = "com.downloader.notification_click_action";
 
-    public static final String NOFINISH_NOTIFICATION_CLICK_ACTION = "com.adsage.sdk.dlplugin.notification_nofinishclick_action";
+    public static final String NOFINISH_NOTIFICATION_CLICK_ACTION = "com.downloader.notification_nofinishclick_action";
 
     private static BroadcastReceiver mNotifactionClickReceiver;
 
@@ -1041,7 +1041,7 @@ public class DownloadManager extends Thread {
                 String downloadStrategyStr = downloadTask.getDownloadStrategy();
                 try {
                     if (!TextUtils.isEmpty(downloadStrategyStr)) {
-                        JSONObject downLoadStrateObj = new JSONObject(
+                        JSONObject  downLoadStrateObj = new JSONObject(
                                 downloadStrategyStr);
                         downLoadStrateObj.put(DownloadStrategy.VISIBILITY_KEY,
                                 visibility);
@@ -1217,12 +1217,11 @@ public class DownloadManager extends Thread {
                             if (mDownLoadCallback != null) {
                                 mDownLoadCallback
                                         .sendFinishMessage(taskId, url);
+                                mDownLoadCallback.sendLoadMessage(taskId,url, fhandler.getTotalSize(), fhandler.getTotalSize(),0,100);
                             }
-//                            mNotificationHelper.updateNotification(taskId + mDbHashCode, 100,
-//                                    100);
-//                            mNotificationHelper.updateNotificationIcon(taskId + mDbHashCode,
-//                                    apkinfos != null ? (Drawable) apkinfos[1]
-//                                            : null);
+                            mNotificationHelper.updateNotification(taskId + mDbHashCode, 100,
+                                    100);
+
 
                         }
 
